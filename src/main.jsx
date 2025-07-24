@@ -21,10 +21,10 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/pricing" element={<Princing />} />
+          <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="/services" element={<PrivateRoute><Services /></PrivateRoute>} />
+          <Route path="/blogs" element={<PrivateRoute><Blogs /></PrivateRoute>} />
+          <Route path="/pricing" element={<PrivateRoute><Princing /></PrivateRoute>} />
           <Route path="/contact" element={<div>This is contact page!</div>} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
