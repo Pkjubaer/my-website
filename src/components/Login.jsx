@@ -25,7 +25,7 @@ const Login = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      navigate("/");
+      navigate("/home");
       setError("");
     } catch (error) {
       console.error("Failed to login", error.message);
